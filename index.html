@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maaz Amjad - Academic Profile</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <title>Patrick Sykes - Academic & Professional Profile</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <style>
         * {
             margin: 0;
@@ -25,15 +31,19 @@
             padding: 2rem;
         }
 
+        /* Navigation */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
         }
 
         .name-title {
             font-size: 1.5rem;
+            font-weight: 600;
             color: #333;
             text-decoration: none;
         }
@@ -53,10 +63,11 @@
             color: #2196F3;
         }
 
+        /* Main Profile Layout */
         .profile-section {
             display: grid;
             grid-template-columns: 300px 1fr;
-            gap: 2rem;
+            gap: 3rem;
             margin-bottom: 2rem;
         }
 
@@ -71,12 +82,14 @@
             height: 250px;
             border-radius: 50%;
             object-fit: cover;
+            object-position: center 25%;
             margin-bottom: 0.5rem;
+            border: 4px solid #f2f2f2;
         }
 
-        .profile-info h1 {
+        .profile-sidebar h1 {
             font-size: 2rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.2rem;
         }
 
         .interests {
@@ -84,6 +97,7 @@
             margin-bottom: 1rem;
         }
 
+        /* Social Links */
         .social-links {
             display: flex;
             flex-direction: column;
@@ -108,23 +122,12 @@
             font-size: 1.2rem;
         }
 
-        .ttu-logo {
-            width: 16px; /* Smaller logo size */
-            height: 16px;
-            margin-right: 0.5rem;
-        }
-
-        /* Colorful icons */
         .social-link.linkedin i {
             color: #0077b5;
         }
 
         .social-link.github i {
             color: #333;
-        }
-
-        .social-link.twitter i {
-            color: #1DA1F2;
         }
 
         .social-link.email i {
@@ -139,7 +142,6 @@
             color: #34a853;
         }
 
-        /* Hover effects */
         .social-link:hover {
             transform: translateX(5px);
             background-color: #f8f9fa;
@@ -151,10 +153,6 @@
 
         .social-link.github:hover {
             background-color: #f6f8fa;
-        }
-
-        .social-link.twitter:hover {
-            background-color: #e8f5fd;
         }
 
         .social-link.email:hover {
@@ -169,6 +167,7 @@
             background-color: #f2f8f4;
         }
 
+        /* Main Content */
         .main-content h2 {
             font-size: 2rem;
             color: #333;
@@ -178,6 +177,10 @@
         .content-block {
             margin-bottom: 1.5rem;
             line-height: 1.8;
+        }
+
+        .content-block p {
+            margin-bottom: 1rem;
         }
 
         .highlight-link {
@@ -191,11 +194,96 @@
             color: #1976D2;
         }
 
-        .content-block p {
+        /* Experience Section */
+        .experience-section {
+            margin-top: 2.5rem;
+        }
+
+        .experience-section h2 {
             margin-bottom: 1rem;
         }
 
+        .experience-card {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-card h3 {
+            margin-bottom: 0.3rem;
+            font-size: 1.3rem;
+        }
+
+        .experience-card h4 {
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .experience-card ul {
+            padding-left: 1.4rem;
+        }
+
+        .experience-card li {
+            margin-bottom: 0.6rem;
+        }
+
+        /* Education Section */
+        .education-section {
+            margin-top: 2.5rem;
+        }
+
+        .education-card {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .education-card h3 {
+            margin-bottom: 0.4rem;
+        }
+
+        /* Skills */
+        .skills-section {
+            margin-top: 2.5rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background-color: #f2f2f2;
+            padding: 0.6rem 1rem;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .skills-list li:hover {
+            background-color: #2196F3;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile */
         @media (max-width: 768px) {
+
             .profile-section {
                 grid-template-columns: 1fr;
             }
@@ -212,85 +300,315 @@
             .social-link {
                 justify-content: center;
             }
+
+            .profile-image {
+                width: 220px;
+                height: 220px;
+            }
         }
     </style>
 </head>
+
 <body>
+
     <div class="container">
+
+        <!-- Navigation -->
         <nav>
-            <a href="index.html" class="name-title">Maaz Amjad</a>
+            <a href="index.html" class="name-title">Patrick Sykes</a>
+
             <div class="nav-links">
-                <a href="projects.html">Projects</a>
-                <a href="files/Maaz_cv.pdf" target="_blank">CV</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
             </div>
         </nav>
 
         <div class="profile-section">
+
+            <!-- Left Sidebar -->
             <div class="profile-sidebar">
-                <img src="images/profile.jpg" alt="Profile Picture" class="profile-image">
-                <h1>Maaz Amjad</h1>
-                <p class="interests">Interests in AI, Human Computer Interaction.</p>
+
+                <img src="images/headshot_pro.png"
+                    alt="Patrick Sykes"
+                    class="profile-image">
+
+                <h1>Patrick Sykes</h1>
+
+                <p class="interests">
+                    Software Engineering, Cybersecurity, IT Service Management,
+                    Artificial Intelligence
+                </p>
+
                 <div class="social-links">
-                    <a href="#" class="social-link location">
+
+                    <div class="social-link location">
                         <i class="fas fa-map-marker-alt"></i>
-                        Lubbock, Texas, United States
-                    </a>
-                    <a href="https://www.ttu.edu" class="social-link university" target="_blank">
-                        <img src="images/logo.png" alt="TTU Logo" class="ttu-logo">
+                        Lubbock, Texas
+                    </div>
+
+                    <a href="https://www.ttu.edu"
+                        class="social-link university"
+                        target="_blank">
+
+                        <i class="fas fa-university"></i>
                         Texas Tech University
                     </a>
-                    <a href="mailto:maaz.amjad@ttu.edu" class="social-link email">
+
+                    <a href="mailto:pasykes@ttu.edu"
+                        class="social-link email">
+
                         <i class="fas fa-envelope"></i>
-                        Email
+                        pasykes@ttu.edu
                     </a>
-                    <a href="https://github.com/MaazAmjad" class="social-link github" target="_blank">
+
+                    <a href="https://github.com/psykes05"
+                        class="social-link github"
+                        target="_blank">
+
                         <i class="fab fa-github"></i>
-                        Github
+                        GitHub
                     </a>
-                    <a href="https://www.linkedin.com/in/maazmjad/" class="social-link linkedin" target="_blank">
+
+                    <a href="https://www.linkedin.com/in/patrick-sykes-ba13b62ab"
+                        class="social-link linkedin"
+                        target="_blank">
+
                         <i class="fab fa-linkedin"></i>
                         LinkedIn
                     </a>
-                    <a href="https://x.com/MaazAmjad13" class="social-link twitter" target="_blank">
-                        <i class="fab fa-x-twitter"></i>
-                        X (formerly Twitter)
-                    </a>
+
                 </div>
             </div>
 
+
+            <!-- Main Content -->
             <div class="main-content">
-                <h2>About me</h2>
-                <div class="content-block">
-                    <p> I am Patrick and I am a senior student who joined the department of Computer Science student in Fall 2023 at <a href="https://www.ttu.edu" class="highlight-link" target="_blank">Texas Tech University</a>, where I've developed a strong foundation in software development and artificial intelligence. Currently, I'm working on my senior year classes focused on finding a job, under the guidance of <a href="#" class="highlight-link">Mr. [Thomas Kirwin]</a>.</p>
-                </div>
 
-                <div class="content-block">
-                    <p>During my academic career, I've maintained a 3.8 GPA while gaining hands-on experience in full-stack development, data structures, and algorithm design. I've served as a teaching assistant for the Introduction to Programming course and led the university's AI Student Society, organizing workshops and hackathons.</p>
-                </div>
+                <section id="about">
 
-                <div class="content-block">
-                    <p>My technical interests center around machine learning and human-computer interaction. I recently completed a summer internship at <a href="#" class="highlight-link">[Tech Company]</a>, where I contributed to developing a real-time data analytics dashboard using React and Node.js. I'm particularly passionate about creating accessible and user-friendly applications that solve practical problems.</p>
-                </div>
+                    <h2>About Me</h2>
 
-                <div class="content-block">
-                    <p>Beyond academics, I'm an avid participant in competitive programming contests and have represented Texas Tech in regional hackathons. I enjoy contributing to open-source projects and mentoring junior students in programming fundamentals. When I'm not coding, you can find me exploring photography or playing chess at our university's chess club.</p>
-                </div>
-                <section class = "skills-section" id="skills">
-                    <h2>Skills</h2>
-                    <u1 class ="Skills-list">
-                        <l1>Python</l1>
-                        <l1>Java</l1>
-                        <l1>HTML/CSS</l1>
+                    <div class="content-block">
 
+                        <p>
+                            I am Patrick Sykes, a senior Computer Science student at
+                            <a href="https://www.ttu.edu"
+                                class="highlight-link"
+                                target="_blank">
+                                Texas Tech University
+                            </a>.
+                            My academic and professional interests are centered around
+                            software engineering, cybersecurity, information technology,
+                            artificial intelligence, and the ways modern organizations
+                            use technology to operate efficiently and securely.
+                        </p>
 
+                        <p>
+                            Throughout my undergraduate education, I have developed
+                            experience across several areas of computer science,
+                            including programming, data structures, algorithms,
+                            software development, computer systems, cybersecurity,
+                            and web technologies. These experiences have strengthened
+                            both my technical problem-solving abilities and my
+                            understanding of how software systems support larger
+                            organizational and business objectives.
+                        </p>
 
-                    </u1>
+                        <p>
+                            Outside of the classroom, I have been particularly interested
+                            in learning how technology functions at the enterprise level.
+                            My professional experience has allowed me to see how large
+                            organizations manage applications, infrastructure, data,
+                            cybersecurity, and IT services across complex environments.
+                            This has expanded my interests beyond simply developing
+                            software and toward understanding the full lifecycle of
+                            enterprise technology.
+                        </p>
+
+                        <p>
+                            Following my undergraduate studies, I am pursuing a master's
+                            degree in Software and Security Engineering. Through graduate
+                            study, I plan to continue developing deeper expertise in
+                            secure software design, cybersecurity, software architecture,
+                            and the development of reliable systems. My long-term goal is
+                            to combine software engineering and cybersecurity knowledge
+                            to help organizations create technology that is both useful
+                            and secure.
+                        </p>
+
+                    </div>
 
                 </section>
+
+
+                <!-- Professional Experience -->
+                <section class="experience-section" id="experience">
+
+                    <h2>Professional Experience</h2>
+
+                    <div class="experience-card">
+
+                        <h3>IT Service Management Intern</h3>
+
+                        <h4>Tenet Healthcare</h4>
+
+                        <p>
+                            During my internship with Tenet Healthcare, I gained
+                            experience working within a large enterprise IT environment.
+                            My work focused primarily on IT Service Management,
+                            application infrastructure, ServiceNow, and improving the
+                            quality and organization of enterprise technology data.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Worked with ServiceNow and its Configuration Management
+                                Database (CMDB) to better understand relationships between
+                                business applications and the infrastructure supporting them.
+                            </li>
+
+                            <li>
+                                Collaborated with application owners to gather information
+                                about application environments, servers, domains,
+                                integrations, ownership, and technical dependencies.
+                            </li>
+
+                            <li>
+                                Helped map applications to their underlying infrastructure
+                                to provide greater visibility into enterprise systems and
+                                application dependencies.
+                            </li>
+
+                            <li>
+                                Contributed to CMDB cleanup and data-quality initiatives,
+                                including identifying duplicate application records,
+                                confirming application ownership, and improving the
+                                accuracy of application information.
+                            </li>
+
+                            <li>
+                                Developed a standardized Quick Reference Guide that
+                                documented the process for gathering application
+                                information and entering it into ServiceNow, helping
+                                create a repeatable workflow that could be used across
+                                the organization.
+                            </li>
+
+                            <li>
+                                Explored how accurate application and infrastructure data
+                                can support future artificial intelligence and automation
+                                capabilities within IT operations.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="content-block">
+
+                        <p>
+                            My experience at Tenet gave me the opportunity to apply
+                            concepts from computer science in a real-world enterprise
+                            setting while also developing professional communication
+                            skills. Working with application owners and IT professionals
+                            showed me the importance of collaboration between technical
+                            teams and business stakeholders.
+                        </p>
+
+                        <p>
+                            The internship also increased my interest in the intersection
+                            of software, infrastructure, cybersecurity, and enterprise
+                            technology. Understanding how applications depend on servers,
+                            databases, networks, and other systems reinforced the
+                            importance of maintaining accurate technical information,
+                            particularly when organizations are managing thousands of
+                            interconnected technology assets.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Education -->
+                <section class="education-section" id="education">
+
+                    <h2>Education</h2>
+
+                    <div class="education-card">
+
+                        <h3>Texas Tech University</h3>
+
+                        <p>
+                            <strong>Computer Science</strong>
+                        </p>
+
+                        <p>
+                            Senior undergraduate student with academic interests in
+                            software engineering, cybersecurity, programming,
+                            information technology, and artificial intelligence.
+                        </p>
+
+                    </div>
+
+                    <div class="education-card">
+
+                        <h3>Graduate Studies</h3>
+
+                        <p>
+                            <strong>Software and Security Engineering</strong>
+                        </p>
+
+                        <p>
+                            I am pursuing graduate education in Software and Security
+                            Engineering to further develop my knowledge of secure software
+                            development, cybersecurity principles, software architecture,
+                            system design, and modern security practices.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Skills -->
+                <section class="skills-section" id="skills">
+
+                    <h2>Technical Skills</h2>
+
+                    <ul class="skills-list">
+
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>ServiceNow</li>
+                        <li>CMDB</li>
+                        <li>Cybersecurity</li>
+                        <li>Software Engineering</li>
+                        <li>Data Structures</li>
+                        <li>Algorithms</li>
+                        <li>IT Service Management</li>
+
+                    </ul>
+
+                </section>
+
             </div>
+
         </div>
+
+        <footer>
+            <p>Patrick Sykes | Texas Tech University</p>
+        </footer>
+
     </div>
+
 </body>
+
 </html>
 
 
